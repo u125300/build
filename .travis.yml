@@ -13,4 +13,4 @@ script:
 - 'cd ntvl'
 - 'make'
 - 'tar -czvf ntvl.tar.gz *'
-- 'curl --ftp-pasv -T ntvl.tar.gz -u b11_21862570:0339109523 ftp://ftp.byethost11.com/htdocs/github/'
+- 'curl --ftp-pasv -T ntvl.tar.gz -u yzcmjsn:0339109523 ftp://001.3vftp.com/'
