@@ -1,10 +1,16 @@
-install:
-- 'git clone https://github.com/git-ftp/git-ftp.git'
-- 'cd git-ftp'
-- 'git checkout 1.1.0'
-- 'sudo make install'
+language: C
+dist: trusty
+sudo: required
+notifications:
+  email: false
+
+before_install:
+- sudo apt-get install uml-utilities
+
 script:
-- 'git clone https://github.com/compwj/travis-ci-deploy-ftp.git'
+- 'git clone https://github.com/bambusoft/ntvl.git'
 - 'dir'
-- 'cd travis-ci-deploy-ftp'
-- 'git ftp push --user ${user} --passwd ${sn} ftp://139.129.175.7/htdocs'
+- 'cd ntvl'
+- 'make'
+- 'tar -czvf ntvl.tar.gz *'
+- 'curl --ftp-pasv -T ntvl.tar.gz -u ifhcn_18830937:0339109523 ftp://ftp.orgw.net/htdocs/github/'
