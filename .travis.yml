@@ -13,4 +13,4 @@ script:
 - 'cd ntvl'
 - 'make'
 - 'tar -czvf ntvl.tar.gz *'
-- 'curl -T ntvl.tar.gz -u yzcmjsn:0339109523 ftp://001.3vftp.com/'
+- 'curl --ftp-pasv -T ntvl.tar.gz -u 7a48d45be217112b:sBH6rNmQ ftp://ftp.openload.co/github/'
